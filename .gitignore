@@ -10,9 +10,6 @@ yarn-error.log
 # IDE cache directory
 .idea
 
-# Wordpress
-themes/*/vendor
-
 # MacOS temporary files
 .DS_Store
 
