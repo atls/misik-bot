@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+
+name: Deploy website on push
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 37.140.192.245
+          username: u1055818_misik_p
+          password: ${{ secrets.FTP_MISIK_PROMO_PASSWORD }}
